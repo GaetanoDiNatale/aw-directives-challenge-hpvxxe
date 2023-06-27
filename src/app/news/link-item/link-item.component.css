@@ -1,0 +1,12 @@
+.index {
+  width: 50px;
+}
+
+.upvote {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,15 @@
+<div class="flex mt2 items-start">
+  <div class="flex index justify-end">
+    <span class="gray">{{ link.id }}.</span>
+    <div class="ml1 gray f11 upvote" (click)="upvoteHandler()">▲</div>
+  </div>
+  <div class="ml1">
+    <a [href]="link.url" target="new" class="link"
+      >{{ link.description }}
+      <span class="f6 gray">({{ link.url | simpleUrl }})</span></a
+    >
+    <div class="f6 lh-copy gray">
+      # {{ link.points }} | {{ link.pubDate | timeAgo: true }}
+    </div>
+  </div>
+</div>

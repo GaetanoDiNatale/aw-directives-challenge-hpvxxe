@@ -1,0 +1,24 @@
+<form (ngSubmit)="createLink()" novalidate [formGroup]="linkForm">
+  <div>
+    <input name="description" type="text" placeholder="A description for the link" formControlName="description"/>
+    <span *ngIf="linkForm.controls.description.errors?.required && linkForm.controls.description.touched">
+      Description is required
+    </span>
+    <span *ngIf="linkForm.controls.description.errors?.minlength && linkForm.controls.description.touched">
+      Description is too short
+    </span>
+    <span *ngIf="linkForm.controls.description.errors?.notDescrizione && linkForm.controls.description.touched">
+      Description cannot contain "descrizione"
+    </span>
+  </div>
+  <div>
+    <input name="url" type="text" placeholder="The URL for the link" formControlName="url"/>
+    <span *ngIf="linkForm.controls.url.errors?.required && linkForm.controls.url.touched">
+      URL is required
+    </span>
+    <span *ngIf="linkForm.controls.url.errors?.pattern && linkForm.controls.url.touched">
+      URL is not formatted properly
+    </span>
+  </div>
+  <button [disabled]="!linkForm.valid">Submit</button>
+</form>

@@ -1,0 +1,6 @@
+<hn-link-item *ngFor="let link of links" [link]="link"></hn-link-item>
+
+<div class="bb bw2 more">
+  <a class="gray no-underline"
+    [routerLink]="['/']" [queryParams]="{ p: page + 1 }">More</a>
+</div>
