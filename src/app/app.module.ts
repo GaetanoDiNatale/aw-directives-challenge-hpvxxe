@@ -8,20 +8,18 @@ import { NewsModule } from './news/news.module';
 import { SubmitModule } from './submit/submit.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, HighlightDirective],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
     NewsModule,
-    SubmitModule
+    SubmitModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
